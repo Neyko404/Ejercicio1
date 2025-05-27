@@ -135,4 +135,8 @@ public class AlumnowebJpaController implements Serializable {
         }
     }
     
+    public String obtenerPasswordPorCodigo(int codigoAlumno) {
+    Alumnoweb alumno = findAlumnoweb(codigoAlumno);
+    return alumno != null ? alumno.getPassEstd(): null;
+}
 }
